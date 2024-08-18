@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title> 
+  <style>
+    * {
+    font-family: "Red Hat Text", sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(20, 50%, 98%);
+}
+.conleft {
+    width: 60%;
+    padding-left: 7.5%;
+    margin-top: 5%;
+}
+h1 {
+    color: hsl(14, 65%, 9%);
+    font-weight: 700;
+}
+.desserts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 2rem;
+}
+.card {
+    width: 79%;
+    height: 350px;
+}
+.card img{
+    width: 250px;
+    border-radius: 15px;
+}
+.h5 {
+    height: 30px;
+    width: 250px;
+    font-size: large;
+    margin-top: -20px;
+    font-weight: 600;
+}
+.price {
+    margin-top: -40px;
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+
+}
+.p {
+    font-size: 16px;
+    margin-top: 40px;
+    width: 150px;
+    color: hsl(14, 25%, 72%);
+}
+.addwa {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addcb {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addma {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addti {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addba {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addpie {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addca {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addbr {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.addpc {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    transform: translateY(-125px);
+    margin-left: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #fff;
+    gap: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:hsl(0, 0%, 80%);
+    border-radius: 20px;
+    z-index: 1000;
+}
+.quantity {
+    position: absolute;
+    background-color: hsl(14, 86%, 42%);
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    gap: 40px;
+    transform: translateY(-125px);
+}
+.quantity img {
+    border: hsl(20, 50%, 98%) solid ;
+    width: 15px;    
+    height: 15px;
+    border-radius: 50%;
+}
+.cartamount {
+    color: hsl(14, 86%, 42%);
+}
+.cart {
+    position: absolute;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    z-index: 1000;
+    transform: translate(920px,-1200px);
+    border-radius: 20px;
+}
+.waffle {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.waffle img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.name {
+    transform: translateY(-10px);
+}
+.pricecart {
+    display: flex;
+    gap: 10px;
+    color: hsl(0, 0%, 70%);
+}
+.cartamount {
+    margin-left: 10%;
+}
+.cremebrulee {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.cremebrulee img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.macaron {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.macaron img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.tiramisu {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.tiramisu img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.baklava {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.baklava img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.pie {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.pie img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.cake {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.cake img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.brownie {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.brownie img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.pannacotta {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10%;
+}
+.pannacotta img{
+    width: 15px;
+    border: 5px hsl(13, 31%, 94%) solid;
+    border-radius: 50%;
+    transform: translate(-20px,0px);
+}
+.ordertotal {
+    width: 90%;
+    transform: translate(20px,0px);
+    display: flex;
+    justify-content: space-between;
+}
+.aboutdelivery {
+    background-color: hsl(13, 31%, 94%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    transform: translate(20px,-10px);
+    gap: 10px;
+    justify-content: center;
+}
+.amountprice {
+    color: black;
+    height: 100px;
+}
+.aboutdelivery img{
+    width: 30px;
+}
+hr {
+    width: 90%;
+    color: hsl(20, 50%, 98%);
+}
+.confirm {
+    width: 90%;
+    height: 40px;
+    transform: translate(20px,-20px);
+    background-color: hsl(14, 86%, 42%);
+    border: hsl(14, 86%, 42%) 2px solid ;
+    border-radius: 25px;
+    color: #fff;
+}
+#amountwa {
+    color: hsl(14, 86%, 42%);
+}
+#amountcb {
+    color: hsl(14, 86%, 42%);
+}
+#amountma {
+    color: hsl(14, 86%, 42%);
+}
+#amountti {
+    color: hsl(14, 86%, 42%);
+}
+#amountba {
+    color: hsl(14, 86%, 42%);
+}
+#amountpie {
+    color: hsl(14, 86%, 42%);
+}
+#amountca {
+    color: hsl(14, 86%, 42%);
+}
+#amountbr {
+    color: hsl(14, 86%, 42%);
+}
+#amountpc {
+    color: hsl(14, 86%, 42%);
+}
+#fullprice {
+    text-decoration: double;
+}
+b {
+    color: hsl(7, 20%, 60%);
+}
+.emptycart {
+    position: absolute;
+    width: 30%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    background-color: #fff;
+    z-index: 999;  
+    transform: translate(920px,-1200px);
+    border-radius: 20px;
+}
+
+.emptycartdesc svg{
+    transform: translateY(20px);
+}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body><div class="conleft">
+  <h1>Desserts</h1>
+  <div class="desserts">
+    <div class="card">
+      <img src="./assets/images/image-waffle-desktop.jpg" alt="">
+      <p class="p">waffle</p>
+      <h5 class="h5">Waffle with berries</h5>
+      <div class="price">$6.50</div>
+      <button class="addwa" onclick="nodisplaywa()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+      <div class="quantity">
+        <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minuswa">
+        <p id="singularamountwa">0</p>
+        <img src="./assets/images/icon-increment-quantity.svg" alt="" id="pluswa">
+      </div>
+    </div>
+    <div class="card">
+    <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="">
+    <p class="p">crème brûlée</p>
+    <h5 class="h5">vanilla bean crème brûlée</h3>
+    <div class="price">$7.00</div>
+    <button class="addcb" onclick="nodisplaycb()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+    <div class="quantity">
+      <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minuscb">
+      <p id="singularamountcb">0</p>
+      <img src="./assets/images/icon-increment-quantity.svg" alt="" id="pluscb">
+      </div>
+  </div>
+  <div class="card">
+  <img src="./assets/images/image-macaron-desktop.jpg" alt="">
+  <p class="p">macaron</p>
+  <h5 class="h5">macarons mix of five</h3>
+  <div class="price">$8.00</div>
+  <button class="addma" onclick="nodisplayma()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+  <div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minusma">
+    <p id="singularamountma">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="plusma">
+    </div>
+</div>
+<div class="card">
+<img src="./assets/images/image-tiramisu-desktop.jpg" alt="">
+<p class="p">tiramisu</p>
+<h5 class="h5">classic tiramisu</h3>
+<div class="price">$5.50</div>
+<button class="addti" onclick="nodisplayti()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+<div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minusti">
+    <p id="singularamountti">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="plusti">
+  </div>
+</div>
+<div class="card">
+<img src="./assets/images/image-baklava-desktop.jpg" alt="">
+<p class="p">baklava</p>
+<h5 class="h5">pistachio baklava</h3>
+<div class="price">$6.50</div>
+<button class="addba" onclick="nodisplayba()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+<div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minusba">
+    <p id="singularamountba">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="plusba">
+  </div>
+</div>
+<div class="card">
+<img src="./assets/images/image-meringue-desktop.jpg" alt="">
+<p class="p">pie</p>
+<h5 class="h5">lemon meringue pie</h3>
+<div class="price">$5.00</div>
+<button class="addpie" onclick="nodisplaypie()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+<div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minuspie">
+    <p id="singularamountpie">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="pluspie">
+  </div>
+</div>
+<div class="card">
+<img src="./assets/images/image-cake-desktop.jpg" alt="">
+<p class="p">cake</p>
+<h5 class="h5">red velvet cake</h3>
+<div class="price">$4.50</div>
+<button class="addca" onclick="nodisplayca()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+<div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minusca">
+    <p id="singularamountca">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="plusca">
+  </div>
+</div>
+<div class="card">
+<img src="./assets/images/image-brownie-desktop.jpg" alt="">
+<p class="p">brownie</p>
+<h5 class="h5">salter caramel brownie</h3>
+<div class="price">$5.50</div>
+<button class="addbr" onclick="nodisplaybr()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+<div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minusbr">
+    <p id="singularamountbr">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="plusbr">
+  </div>
+</div>
+<div class="card">
+<img src="./assets/images/image-panna-cotta-desktop.jpg" alt="">
+<p class="p">panna cotta</p>
+<h5 class="h5">vanilla panna cotta</h3>
+<div class="price">$6.50</div>
+<button class="addpc" onclick="nodisplaypc()"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20"><g fill="#C73B0F" clip-path="url(#a)"><path d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"/><path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.333 0h20v20h-20z"/></clipPath></defs></svg>Add to cart </button>
+<div class="quantity">
+    <img src="./assets/images/icon-decrement-quantity.svg" alt="" id="minuspc">
+    <p id="singularamountpc">0</p>
+    <img src="./assets/images/icon-increment-quantity.svg" alt="" id="pluspc">
+  </div>
+</div>
+  </div>
+</div>
+<div class="cart">
+    <h1 class="cartamount">Your Cart <span id="fullamount">0</span></h1>
+    <div class="waffle">
+        <div class="desc">
+         <div class="name"> waffle with berries</div>
+         <div class="pricecart"><span id="amountwa">0 </span> @ $6.50 <span id="fullpricewa"><b>$6.50</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrwa">
+    <div class="cremebrulee">
+        <div class="desc">
+        <div class="name"> vanilla bean creme brulee</div>
+         <div class="pricecart"><span id="amountcb">1x</span> @ $7.00 <span id="fullpricecb"><b>$7.00</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hcb">
+    <div class="macaron">
+        <div class="desc">
+        <div class="name"> macaron mix of five</div>
+         <div class="pricecart"><span id="amountma">1x</span> @ $8.00 <span id="fullpricema"><b>$8.00</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrma">
+    <div class="tiramisu">
+        <div class="desc">
+        <div class="name"> classic tiramisu</div>
+         <div class="pricecart"><span id="amountti">1x</span> @ $5.50 <span id="fullpriceti"><b>$5.50</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrti">
+    <div class="baklava">
+        <div class="desc">
+        <div class="name"> pistachio baklava</div>
+         <div class="pricecart"><span id="amountba">1x</span> @ $4.00 <span id="fullpriceba"><b>$4.00</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrba">
+    <div class="pie">
+        <div class="desc">
+        <div class="name"> lemon meringue pie</div>
+         <div class="pricecart"><span id="amountpie">1x</span> @ $5.00 <span id="fullpricepie"><b>$5.00</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrpie">
+    <div class="cake">
+        <div class="desc">
+        <div class="name"> red velvet cake</div>
+         <div class="pricecart"><span id="amountca">1x</span> @ $4.50 <span id="fullpriceca"><b>$4.50</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrca">
+    <div class="brownie">
+        <div class="desc">
+        <div class="name"> salted caramel brownie</div>
+         <div class="pricecart"><span id="amountbr">1x</span> @ $5.50 <span id="fullpricebr"><b>$5.50</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrbr">
+    <div class="pannacotta">
+        <div class="desc">
+        <div class="name"> vanilla panna cotta</div>
+         <div class="pricecart"><span id="amountpc">1x</span> @ $6.50 <span id="fullpricepc"><b>$6.50</b></span></div>   
+        </div>
+        <div class="del">
+            <img src="./assets/images/icon-remove-item.svg" alt="">
+        </div>
+    </div>
+    <hr class="hrpc">
+    <div class="ordertotal">
+        <p>Order total</p>
+        <p class="totalprice"> <b class="amountprice">$100.00</b></p>
+    </div>
+    <div class="aboutdelivery">
+        <img src="./assets/images/icon-carbon-neutral.svg" alt="">
+        <p>this is a <span id="carbonneutral">carbon neutral</span> delivery</p>
+    </div>
+    <button class="confirm">Confirm Order</button>
+</div>
+<div class="emptycart">
+    <h1 class="cartamount">Your Cart<span id="fullamount">(0)</span></h1>
+    <div class="emptycartdesc">
+    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="none" viewBox="0 0 128 128"><path fill="#260F08" d="M8.436 110.406c0 1.061 4.636 2.079 12.887 2.829 8.252.75 19.444 1.171 31.113 1.171 11.67 0 22.861-.421 31.113-1.171 8.251-.75 12.887-1.768 12.887-2.829 0-1.061-4.636-2.078-12.887-2.828-8.252-.75-19.443-1.172-31.113-1.172-11.67 0-22.861.422-31.113 1.172-8.251.75-12.887 1.767-12.887 2.828Z" opacity=".15"/><path fill="#87635A" d="m119.983 24.22-47.147 5.76 4.32 35.36 44.773-5.467a2.377 2.377 0 0 0 2.017-1.734c.083-.304.104-.62.063-.933l-4.026-32.986Z"/><path fill="#AD8A85" d="m74.561 44.142 47.147-5.754 1.435 11.778-47.142 5.758-1.44-11.782Z"/><path fill="#CAAFA7" d="M85.636 36.78a2.4 2.4 0 0 0-2.667-2.054 2.375 2.375 0 0 0-2.053 2.667l.293 2.347a3.574 3.574 0 0 1-7.066.88l-1.307-10.667 14.48-16.88c19.253-.693 34.133 3.6 35.013 10.8l1.28 10.533a1.172 1.172 0 0 1-1.333 1.307 4.696 4.696 0 0 1-3.787-4.08 2.378 2.378 0 1 0-4.72.587l.294 2.346a2.389 2.389 0 0 1-.484 1.755 2.387 2.387 0 0 1-1.583.899 2.383 2.383 0 0 1-1.755-.484 2.378 2.378 0 0 1-.898-1.583 2.371 2.371 0 0 0-1.716-2.008 2.374 2.374 0 0 0-2.511.817 2.374 2.374 0 0 0-.493 1.751l.293 2.373a4.753 4.753 0 0 1-7.652 4.317 4.755 4.755 0 0 1-1.788-3.17l-.427-3.547a2.346 2.346 0 0 0-2.666-2.053 2.4 2.4 0 0 0-2.08 2.667l.16 1.173a2.378 2.378 0 1 1-4.72.587l-.107-1.28Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".974" d="m81.076 28.966 34.187-4.16"/><path fill="#87635A" d="M7.45 51.793c-.96 8.48 16.746 17.44 39.466 19.947 22.72 2.506 42.08-2.16 43.04-10.667l-3.947 35.493c-.96 8.48-20.24 13.334-43.04 10.667S2.463 95.74 3.423 87.18l4.026-35.387Z"/><path fill="#AD8A85" d="M5.823 65.953c-.96 8.453 16.746 17.44 39.573 20.027 22.827 2.586 42.053-2.187 43.013-10.667L87.076 87.1c-.96 8.48-20.24 13.333-43.04 10.666C21.236 95.1 3.53 86.22 4.49 77.74l1.334-11.787Z"/><path fill="#CAAFA7" d="M60.836 42.78a119.963 119.963 0 0 0-10.347-1.627c-24-2.667-44.453 1.893-45.333 10.373l-2.133 18.88a3.556 3.556 0 1 0 7.066.8 3.574 3.574 0 1 1 7.094.8l-.8 7.094a5.93 5.93 0 1 0 11.786 1.333 3.556 3.556 0 0 1 7.067.8l-.267 2.347a3.573 3.573 0 0 0 7.094.826l.133-1.2a5.932 5.932 0 1 1 11.787 1.36l-.4 3.52a3.573 3.573 0 0 0 7.093.827l.933-8.267a1.174 1.174 0 0 1 1.307-.906 1.146 1.146 0 0 1 1.04 1.306 5.947 5.947 0 0 0 11.813 1.334l.534-4.72a3.556 3.556 0 0 1 7.066.8 3.573 3.573 0 0 0 7.094.826l1.786-15.546a2.373 2.373 0 0 0-2.08-2.667L44.143 55.74l16.693-12.96Z"/><path fill="#87635A" d="m59.156 57.66 1.68-14.88-16.827 13.173 15.147 1.707Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".974" d="M9.796 52.06c-.667 5.866 16.24 12.586 37.733 15.04 14.774 1.68 27.867.906 34.854-1.654"/></svg>
+    <p><b>your added items will be here</b></p>
+</div>
+</body>
+<script>
+    // Initialize selectors
+let pluswa = document.querySelector('#pluswa');
+let minuswa = document.querySelector('#minuswa');
+let amountwa = document.querySelector('#singularamountwa');
+
+let pluscb = document.querySelector('#pluscb');
+let minuscb = document.querySelector('#minuscb');
+let amountcb = document.querySelector('#singularamountcb');
+
+let plusma = document.querySelector('#plusma');
+let minusma = document.querySelector('#minusma');
+let amountma = document.querySelector('#singularamountma');
+
+let plusti = document.querySelector('#plusti');
+let minusti = document.querySelector('#minusti');
+let amountti = document.querySelector('#singularamountti');
+
+let plusba = document.querySelector('#plusba');
+let minusba = document.querySelector('#minusba');
+let amountba = document.querySelector('#singularamountba');
+
+let pluspie = document.querySelector('#pluspie');
+let minuspie = document.querySelector('#minuspie');
+let amountpie = document.querySelector('#singularamountpie');
+
+let plusca = document.querySelector('#plusca');
+let minusca = document.querySelector('#minusca');
+let amountca = document.querySelector('#singularamountca');
+
+let plusbr = document.querySelector('#plusbr');
+let minusbr = document.querySelector('#minusbr');
+let amountbr = document.querySelector('#singularamountbr');
+
+let pluspc = document.querySelector('#pluspc');
+let minuspc = document.querySelector('#minuspc');
+let amountpc = document.querySelector('#singularamountpc');
+
+let hrwa = document.querySelector('.hrwa');
+let hcb = document.querySelector('.hcb');
+let hrma = document.querySelector('.hrma');
+let hrti = document.querySelector('.hrti');
+let hrba = document.querySelector('.hrba');
+let hrpie = document.querySelector('.hrpie');
+let hrca = document.querySelector('.hrca');
+let hrbr = document.querySelector('.hrbr');
+let hrpc = document.querySelector('.hrpc');
+
+// Initialize order selectors
+let orderwa = document.querySelector('.waffle');
+let ordercb = document.querySelector('.cremebrulee');
+let orderma = document.querySelector('.macaron');
+let orderti = document.querySelector('.tiramisu');
+let orderba = document.querySelector('.baklava');
+let orderpie = document.querySelector('.pie');
+let orderca = document.querySelector('.cake');
+let orderbr = document.querySelector('.brownie');
+let orderpc = document.querySelector('.pannacotta');
+
+// Initialize amount in cart
+let cartamountwa = document.querySelector('#amountwa');
+let cartamountcb = document.querySelector('#amountcb');
+let cartamountma = document.querySelector('#amountma');
+let cartamountti = document.querySelector('#amountti');
+let cartamountba = document.querySelector('#amountba');
+let cartamountpie = document.querySelector('#amountpie');
+let cartamountca = document.querySelector('#amountca');
+let cartamountbr = document.querySelector('#amountbr');
+let cartamountpc = document.querySelector('#amountpc');
+
+// Initialize full prices
+let fullpricewa = document.querySelector('#fullpricewa');
+let fullpricecb = document.querySelector('#fullpricecb');
+let fullpricema = document.querySelector('#fullpricema');
+let fullpriceti = document.querySelector('#fullpriceti');
+let fullpriceba = document.querySelector('#fullpriceba');
+let fullpricepie = document.querySelector('#fullpricepie');
+let fullpriceca = document.querySelector('#fullpriceca');
+let fullpricebr = document.querySelector('#fullpricebr');
+let fullpricepc = document.querySelector('#fullpricepc');
+
+// Initialize counters
+let countwa = parseInt(amountwa.textContent, 10);
+let countcb = parseInt(amountcb.textContent, 10);
+let countma = parseInt(amountma.textContent, 10);
+let countti = parseInt(amountti.textContent, 10);
+let countba = parseInt(amountba.textContent, 10);
+let countpie = parseInt(amountpie.textContent, 10);
+let countca = parseInt(amountca.textContent, 10);
+let countbr = parseInt(amountbr.textContent, 10);
+let countpc = parseInt(amountpc.textContent, 10);
+
+let fullamount = document.querySelector('#fullamount')
+let cart = document.querySelector('.cart')
+let fullprice = document.querySelector('.amountprice')
+
+// Function to calculate prices
+function calculatePrice() {
+    let calcpricewa = countwa * 6.50;
+    let calcpricecb = countcb * 7.00;
+    let calcpricema = countma * 8.00;
+    let calcpriceti = countti * 5.50;
+    let calcpriceba = countba * 6.50;
+    let calcpricepie = countpie * 5.00;
+    let calcpriceca = countca * 4.50;
+    let calcpricebr = countbr * 5.50;
+    let calcpricepc = countpc * 6.50;
+    return {calcpricewa, calcpricecb, calcpricema, calcpriceti, calcpriceba, calcpricepie, calcpriceca, calcpricebr, calcpricepc};
+}
+
+// Function to update display for all counters
+function updateDisplay() {
+    amountwa.textContent = countwa;
+    amountcb.textContent = countcb;
+    amountma.textContent = countma;
+    amountti.textContent = countti;
+    amountba.textContent = countba;
+    amountpie.textContent = countpie;
+    amountca.textContent = countca;
+    amountbr.textContent = countbr;
+    amountpc.textContent = countpc;
+    cartamountwa.textContent = countwa;
+    cartamountcb.textContent = countcb;
+    cartamountma.textContent = countma;
+    cartamountti.textContent = countti;
+    cartamountba.textContent = countba;
+    cartamountpie.textContent = countpie;
+    cartamountca.textContent = countca;
+    cartamountbr.textContent = countbr;
+    cartamountpc.textContent = countpc;
+    
+    let { calcpricewa, calcpricecb, calcpricema, calcpriceti, calcpriceba, calcpricepie, calcpriceca, calcpricebr, calcpricepc } = calculatePrice();
+    fullpricewa.textContent = calcpricewa.toFixed(2);
+    fullpricecb.textContent = calcpricecb.toFixed(2);
+    fullpricema.textContent = calcpricema.toFixed(2);
+    fullpriceti.textContent = calcpriceti.toFixed(2);
+    fullpriceba.textContent = calcpriceba.toFixed(2);
+    fullpricepie.textContent = calcpricepie.toFixed(2);
+    fullpriceca.textContent = calcpriceca.toFixed(2);
+    fullpricebr.textContent = calcpricebr.toFixed(2);
+    fullpricepc.textContent = calcpricepc.toFixed(2);
+
+    let totalPrice = calcpricewa + calcpricecb + calcpricema + calcpriceti + calcpriceba + calcpricepie + calcpriceca + calcpricebr + calcpricepc;
+    fullprice.textContent = totalPrice.toFixed(2);
+
+    fullamount.textContent = countwa + countcb + countma + countti + countba + countpie + countca + countbr + countpc;
+
+    checkOrderDisplay();
+    nodisplay();
+}
+
+// Function to hide or show the cart based on total amount
+function nodisplay() {
+    cart.style.display = (parseInt(fullamount.textContent, 10) === 0) ? 'none' : 'flex';
+}
+
+// Function to check order display
+function checkOrderDisplay() {
+    // Helper function to toggle display based on count
+    function toggleDisplay(item, amount, hr) {
+        if (amount === 0) {
+            item.style.display = 'none';
+            hr.style.display = 'none';
+        } else {
+            item.style.display = 'flex';
+            hr.style.display = 'flex';
+        }
+    }
+
+    toggleDisplay(orderwa, countwa, hrwa);
+    toggleDisplay(ordercb, countcb, hcb);
+    toggleDisplay(orderma, countma, hrma);
+    toggleDisplay(orderti, countti, hrti);
+    toggleDisplay(orderba, countba, hrba);
+    toggleDisplay(orderpie, countpie, hrpie);
+    toggleDisplay(orderca, countca, hrca);
+    toggleDisplay(orderbr, countbr, hrbr);
+    toggleDisplay(orderpc, countpc, hrpc);
+}
+
+// Initial check to set the display status
+checkOrderDisplay();
+nodisplay();
+
+// Event listeners for 'wa' counter
+pluswa.addEventListener("click", function() {
+    countwa++;
+    updateDisplay();
+});
+
+minuswa.addEventListener("click", function() {
+    countwa = Math.max(countwa - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'cb' counter
+pluscb.addEventListener("click", function() {
+    countcb++;
+    updateDisplay();
+});
+
+minuscb.addEventListener("click", function() {
+    countcb = Math.max(countcb - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'ma' counter
+plusma.addEventListener("click", function() {
+    countma++;
+    updateDisplay();
+});
+
+minusma.addEventListener("click", function() {
+    countma = Math.max(countma - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'ti' counter
+plusti.addEventListener("click", function() {
+    countti++;
+    updateDisplay();
+});
+
+minusti.addEventListener("click", function() {
+    countti = Math.max(countti - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'ba' counter
+plusba.addEventListener("click", function() {
+    countba++;
+    updateDisplay();
+});
+
+minusba.addEventListener("click", function() {
+    countba = Math.max(countba - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'pie' counter
+pluspie.addEventListener("click", function() {
+    countpie++;
+    updateDisplay();
+});
+
+minuspie.addEventListener("click", function() {
+    countpie = Math.max(countpie - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'ca' counter
+plusca.addEventListener("click", function() {
+    countca++;
+    updateDisplay();
+});
+
+minusca.addEventListener("click", function() {
+    countca = Math.max(countca - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'br' counter
+plusbr.addEventListener("click", function() {
+    countbr++;
+    updateDisplay();
+});
+
+minusbr.addEventListener("click", function() {
+    countbr = Math.max(countbr - 1, 0);
+    updateDisplay();
+});
+
+// Event listeners for 'pc' counter
+pluspc.addEventListener("click", function() {
+    countpc++;
+    updateDisplay();
+});
+
+minuspc.addEventListener("click", function() {
+    countpc = Math.max(countpc - 1, 0);
+    updateDisplay();
+});
+
+function nodisplaywa() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addwa');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplaycb() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addcb');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplayma() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addma');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplayti() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addti');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplayba() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addba');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplaypie() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addpie');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplayca() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addca');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplaybr() {
+    // Make sure to select the element you want to hide
+    let addtocartwa = document.querySelector('.addbr');
+        addtocartwa.style.display = 'none';
+}
+
+function nodisplaypc() {
+    let addtocartwa = document.querySelector('.addpc');
+        addtocartwa.style.display = 'none';
+}
+</script>
+</html>
